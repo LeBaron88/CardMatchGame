@@ -6,7 +6,7 @@ var cards_array, guess_count, pair_count, score, game_playing, played, wrong_gue
 
 cards_array = ["A", "K", "Q", "J", "10", "A", "K", "Q", "J", "10"];
 ft = "perspective(600px) rotateY(0deg)";
-bk = "perspective(600px) rotateY(-180deg)";
+bk = "perspective(-600px) rotateY(-180deg)";
 matched_card = "images/matched.png";
 
 // Attach event listner for onclick event to the new game button initially hidden
