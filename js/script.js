@@ -31,9 +31,9 @@ function init_game(){
     let backs = document.querySelectorAll(".back");
     for(let i = 0; i < fronts.length; i++){
         fronts[i].style.transform = bk;
-        fronts[i].style.zIndex = 2;
+        fronts[i].style.zIndex = 1;
         backs[i].style.transform = ft;  
-        backs[i].style.zIndex = 1;
+        backs[i].style.zIndex = 3;
     }
 
     // shuffle and allocate cards 
