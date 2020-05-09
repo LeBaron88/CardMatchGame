@@ -114,9 +114,9 @@ for (let i = 0; i < card.length ; i++){
                         played_back[0].style.transform = ft;
                         played_back[0].style.zIndex = 3;
                         played[1].style.transform = bk;
-                        played[0].style.zIndex = 1;
+                        played[1].style.zIndex = 1;
                         played_back[1].style.transform = ft;
-                        played_back[0].style.zIndex = 3;
+                        played_back[1].style.zIndex = 3;
                         card_spinning = false;
                     }, 700); 
                     // if the player guesses wrongly 5 times then game is over
