@@ -6,7 +6,7 @@ var cards_array, guess_count, pair_count, score, game_playing, played, wrong_gue
 
 cards_array = ["A", "K", "Q", "J", "10", "A", "K", "Q", "J", "10"];
 ft = "perspective(600px) rotateY(0deg)";
-bk = "perspective(-600px) rotateY(-180deg)";
+bk = "perspective(600px) rotateY(-180deg)";
 matched_card = "images/matched.png";
 
 // Attach event listner for onclick event to the new game button initially hidden
@@ -31,7 +31,9 @@ function init_game(){
     let backs = document.querySelectorAll(".back");
     for(let i = 0; i < fronts.length; i++){
         fronts[i].style.transform = bk;
-        backs[i].style.transform = ft;   
+        fronts[i].style.zIndez = 2;
+        backs[i].style.transform = ft;  
+        backs[i].style.zIndez = 1;
     }
 
     // shuffle and allocate cards 
@@ -71,7 +73,9 @@ for (let i = 0; i < card.length ; i++){
         if(game_playing && curr_card_ft.style.transform !== ft && !card_spinning){
             if(guess_count < 2){
                 curr_card_ft.style.transform = ft;
+                curr_card_ft.style.zIndez = 2;
                 curr_card_bk.style.transform = bk;
+                curr_card_ft.style.zIndez = 1;
                 // Check if the card has already been matched
                 if(!curr_card_ft.src.includes(matched_card)){
                     played[guess_count] = curr_card_ft;
